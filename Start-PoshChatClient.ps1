@@ -122,7 +122,7 @@ $handle = $ps.AddScript({
                 $fontDialog.ShowEffects = $False
             }          
             $styles = New-Object System.Collections.Arraylist
-            $textDecorations = $Control.TextDecorations | Select -Expand Location
+            $textDecorations = $Control.TextDecorations | Select-Object -Expand Location
             If ($textDecorations -contains "Underline") {
                 $Styles.Add("Underline") | Out-Null
             }
